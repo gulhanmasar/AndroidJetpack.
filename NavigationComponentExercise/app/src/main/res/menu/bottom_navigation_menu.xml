@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/birinciFragment"
+        android:icon="@drawable/birinci_icon"
+        android:title="Birinci" />
+    <item
+        android:id="@+id/ikinciFragment"
+        android:icon="@drawable/iki_icon"
+        android:title="ikinci" />
+    <item
+        android:id="@+id/listFragment"
+        android:icon="@drawable/liste_icon"
+        android:title="liste" />
+</menu>

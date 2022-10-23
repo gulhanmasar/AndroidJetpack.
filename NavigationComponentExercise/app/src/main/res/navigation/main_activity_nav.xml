@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/birinciFragment">
+
+    <fragment
+        android:id="@+id/birinciFragment"
+        android:name="com.example.navigationcomponentexercise.BirinciFragment"
+        android:label="fragment_birinci"
+        tools:layout="@layout/fragment_birinci" >
+        <action
+            android:id="@+id/birinci_to_ikinci"
+            app:destination="@id/ikinciFragment"
+            app:popUpTo="@id/birinciFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ikinciFragment"
+        android:name="com.example.navigationcomponentexercise.IkinciFragment"
+        android:label="fragment_ikinci"
+        tools:layout="@layout/fragment_ikinci" >
+        <argument
+            android:name="kisi"
+            app:argType="com.example.navigationcomponentexercise.Kisi" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.navigationcomponentexercise.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/list_to_detay"
+            app:destination="@id/detayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.navigationcomponentexercise.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="rehberKisi"
+            app:argType="com.example.navigationcomponentexercise.RehberKisi" />
+    </fragment>
+</navigation>
